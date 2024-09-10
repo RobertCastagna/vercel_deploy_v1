@@ -71,7 +71,7 @@ const timelineData: TimelineItem[] = [
 ]
 
 export function RefinedTimelinePortfolio() {
-  const [filter, setFilter] = useState<'all' | 'work' | 'github' | 'huggingface'>('all')
+  const [filter, setFilter] = useState<'all' | 'work' | 'github' | 'education' | 'huggingface'>('all')
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const filteredData = timelineData.filter(item => filter === 'all' || item.type === filter)
