@@ -20,20 +20,20 @@ type TimelineItem = {
 const timelineData: TimelineItem[] = [
   {
     type: 'work',
-    title: 'Senior Software Engineer',
-    organization: 'Tech Corp',
-    date: '2021 - Present',
+    title: 'Data Engineer',
+    organization: 'CI Financial',
+    date: '2022 - Present',
     description: 'Leading the development of cloud-native applications using microservices architecture. Responsible for designing and implementing scalable solutions, mentoring junior developers, and driving the adoption of best practices in software development.',
-    skills: ['React', 'Node.js', 'AWS', 'Docker']
+    skills: ['Python', 'SQL', 'AWS', 'Snowflake', 'dbt']
   },
   {
-    type: 'github',
-    title: 'E-commerce Platform',
+    type: 'huggingface',
+    title: 'Portfolio Optimization',
     organization: 'Personal Project',
-    date: '2020',
-    description: 'Developed a comprehensive e-commerce platform using React for the frontend and Express for the backend. Implemented features such as user authentication, product catalog, shopping cart, and payment integration with Stripe.',
-    skills: ['React', 'Express', 'MongoDB', 'Stripe API'],
-    link: 'https://github.com/yourusername/e-commerce-platform'
+    date: '2024',
+    description: 'Developed a comprehensive investment analysis platform incorporating fundamental and sentiment analysis, as well as portfolio optimization. Integrated prebuilt strategies for portfolio construction, live news sentiment analysis using FinBERT, and risk optimization tools. Additionally, supports live portfolio tracking with IBKR integration for paper trading.',
+    skills: ['OpenBB','Python','Pandas','Riskfolio','Transformers','Streamlit','AsyncIO'],
+    link: 'https://huggingface.co/spaces/RobertCastagna/Fin_Research'
   },
   {
     type: 'education',
@@ -71,7 +71,7 @@ const timelineData: TimelineItem[] = [
 ]
 
 export function RefinedTimelinePortfolio() {
-  const [filter, setFilter] = useState<'all' | 'work' | 'education' | 'github' | 'huggingface'>('all')
+  const [filter, setFilter] = useState<'all' | 'work' | 'github' | 'huggingface'>('all')
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
 
   const filteredData = timelineData.filter(item => filter === 'all' || item.type === filter)
