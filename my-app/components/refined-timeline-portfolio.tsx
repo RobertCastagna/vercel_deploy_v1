@@ -79,19 +79,19 @@ export function RefinedTimelinePortfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-200 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center mb-8">My Software Engineering Journey</h1>
+        <h1 className="text-4xl font-bold text-center mb-8">How I got to where I am.</h1>
         
         <Card className="mb-8 rounded-xl">
           <CardContent className="flex items-center space-x-4 pt-6">
             <Avatar className="w-24 h-24">
               <AvatarImage src="/placeholder.svg?height=96&width=96" alt="Profile" />
-              <AvatarFallback>JD</AvatarFallback>
+              <AvatarFallback>RC</AvatarFallback>
             </Avatar>
             <div>
-              <h2 className="text-2xl font-bold">John Doe</h2>
+              <h2 className="text-2xl font-bold">Robert Castagna</h2>
               <p className="text-gray-600 mt-2">
-                Passionate software engineer with 5+ years of experience in full-stack development.
-                Specialized in building scalable web applications and machine learning models.
+                Passionate software engineer with 4+ years of experience in a data specialized role.
+                Mostly work on maintaining distributed compute systems, large scale data processesing and advanced monitoring tools.
               </p>
             </div>
           </CardContent>
