@@ -28,7 +28,7 @@ const timelineData: TimelineItem[] = [
   },
   {
     type: 'huggingface',
-    title: 'Portfolio Optimization',
+    title: 'Portfolio Optimization App',
     organization: 'Personal Project',
     date: '2024',
     description: 'Developed a comprehensive investment analysis platform incorporating fundamental and sentiment analysis, as well as portfolio optimization. Integrated prebuilt strategies for portfolio construction, live news sentiment analysis using FinBERT, and risk optimization tools. Additionally, supports live portfolio tracking with IBKR integration for paper trading.',
@@ -36,37 +36,37 @@ const timelineData: TimelineItem[] = [
     link: 'https://huggingface.co/spaces/RobertCastagna/Fin_Research'
   },
   {
+    type: 'github',
+    title: 'Quant Trading App',
+    organization: 'Personal Project',
+    date: '2024',
+    description: 'Developed a web app for an options trading competition using Streamlit, pulling market data from online API\'s. Integrated backtested strategies to signal entry points and included Black-Scholes and Binomial options pricing models. Expanded features over an 8-week period, with full project details available on GitHub.',
+    skills: ['Backtesting','Python','Pandas','Ta-lib','Scipy','Streamlit'],
+    link: 'https://quanttrading.streamlit.app/'
+  },
+  {
     type: 'education',
-    title: 'MSc in Computer Science',
-    organization: 'Tech University',
-    date: '2018 - 2020',
-    description: 'Completed a Master\'s degree in Computer Science with a focus on Machine Learning and Distributed Systems. Conducted research on optimizing distributed machine learning algorithms and published a paper on the findings.',
-    skills: ['Machine Learning', 'Distributed Systems', 'Python']
+    title: 'MSc in Financial Mathematics',
+    organization: 'The Johns Hopkins University',
+    date: '2023 - Present',
+    description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
+    skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
   },
   {
     type: 'work',
-    title: 'Software Developer',
-    organization: 'Startup Inc',
-    date: '2017 - 2021',
-    description: 'Worked in an agile team to develop and maintain web applications for a diverse client base. Responsibilities included full-stack development, code reviews, and collaborating with designers and product managers to deliver high-quality software solutions.',
+    title: 'Data Analyst',
+    organization: 'C2P Inc',
+    date: '2020 - 2022',
+    description: 'Worked alongside management to create data flows and published process stability reports. Responsibilities included writing core MS SQL procedures and triggers, and collaborating with designers and product managers to deliver high-quality solutions.',
     skills: ['JavaScript', 'Python', 'SQL', 'Git']
   },
   {
-    type: 'huggingface',
-    title: 'NLP Model for Sentiment Analysis',
-    organization: 'Open Source Contribution',
-    date: '2019',
-    description: 'Created and fine-tuned a BERT-based model for sentiment analysis on product reviews. The model achieves state-of-the-art performance on several benchmark datasets and is publicly available for use and further development by the community.',
-    skills: ['PyTorch', 'Transformers', 'NLP'],
-    link: 'https://huggingface.co/yourusername/sentiment-analysis-bert'
-  },
-  {
     type: 'education',
-    title: 'BSc in Software Engineering',
-    organization: 'State University',
-    date: '2013 - 2017',
-    description: 'Completed a Bachelor\'s degree in Software Engineering, gaining a strong foundation in computer science principles, software development methodologies, algorithms, and data structures. Participated in various hackathons and coding competitions.',
-    skills: ['Java', 'Data Structures', 'Algorithms']
+    title: 'BSc in Applied Mathematics and Engineering',
+    organization: 'Queen\'s University',
+    date: '',
+    description: 'Specialized in control systems and robotics. I gained skills in advanced mathematics principles, software development methodologies, and stochastic control systems. Completed a 1 year internship.',
+    skills: ['Stochastic Processes', 'Data Structures', 'Information Theory']
   }
 ]
 
