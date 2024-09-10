@@ -77,7 +77,7 @@ export function RefinedTimelinePortfolio() {
   const filteredData = timelineData.filter(item => filter === 'all' || item.type === filter)
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-200 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">My Software Engineering Journey</h1>
         
@@ -130,7 +130,7 @@ export function RefinedTimelinePortfolio() {
           </Badge>
         </div>
 
-        <div className="relative py-4">
+        <div className="relative">
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300"></div>
 
           <div className="space-y-2">
