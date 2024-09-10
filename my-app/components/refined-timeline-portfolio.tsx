@@ -130,7 +130,7 @@ export function RefinedTimelinePortfolio() {
           </Badge>
         </div>
 
-        <div className="relative">
+        <div className="relative py-4">
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300"></div>
 
           <div className="space-y-2">
