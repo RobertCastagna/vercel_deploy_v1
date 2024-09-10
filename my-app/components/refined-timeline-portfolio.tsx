@@ -133,7 +133,7 @@ export function RefinedTimelinePortfolio() {
         <div className="relative">
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300"></div>
 
-          <div className="space-y-4">
+          <div className="space-y-2">
             {filteredData.map((item, index) => (
               <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-start`}>
                 <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
