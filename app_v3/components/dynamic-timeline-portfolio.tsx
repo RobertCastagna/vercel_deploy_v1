@@ -82,12 +82,7 @@ export function DynamicTimelinePortfolio() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      
-      if (scrollPosition > 100) {
-        setLargeCard(false);
-      } else {
-        setLargeCard(true);
-      }
+      setLargeCard(scrollPosition < 100);
     };
   
     window.addEventListener('scroll', handleScroll);
@@ -98,7 +93,7 @@ export function DynamicTimelinePortfolio() {
     <div className="min-h-screen bg-gray-100">
       <div 
         ref={cardRef}
-        className={`sticky top-0 z-10 transition-all duration-500 ease-in-out ${
+        className={`transition-all duration-500 ease-in-out ${
           largeCard ? 'h-screen' : 'h-auto'
         }`}
       >
@@ -216,11 +211,7 @@ export function DynamicTimelinePortfolio() {
                       onMouseLeave={() => setExpandedIndex(null)}
                     >
                       <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold mb-1">{item.title}
-                          {item.type === 'work' && <BriefcaseIcon className="w-5 h-5 text-blue-500" />}
-                          {item.type === 'education' && <GraduationCapIcon className="w-5 h-5 text-green-500" />}
-                          {item.type === 'github' && <GithubIcon className="w-5 h-5 text-purple-500" />}
-                          {item.type === 'huggingface' && <ExternalLinkIcon className="w-5 h-5 text-red-500" />}
+                        <h3 className="text-lg font-semibold mb-1">{item.title}{item.type === 'work' && <BriefcaseIcon className="w-5 h-5 text-blue-500" />}{item.type === 'education' && <GraduationCapIcon className="w-5 h-5 text-green-500" />}{item.type === 'github' && <GithubIcon className="w-5 h-5 text-purple-500" />}{item.type === 'huggingface' && <ExternalLinkIcon className="w-5 h-5 text-red-500" />}
                         </h3>
                         <p className="text-sm text-gray-600 mb-2">{item.organization} | {item.date}</p>
                         <p className="text-sm text-gray-600 mb-2">
