@@ -83,7 +83,10 @@ export function DynamicTimelinePortfolio() {
     const handleScroll = () => {
       if (cardRef.current) {
         const cardBottom = cardRef.current.getBoundingClientRect().bottom
-        setLargeCard(cardBottom > 0)
+        // modfications to trigger shrink
+        const windowHeight = window.innerHeight;
+        setLargeCard(cardBottom > windowHeight / 2);    
+        // setLargeCard(cardBottom > 0)
       }
     }
 
@@ -213,11 +216,12 @@ export function DynamicTimelinePortfolio() {
                       onMouseLeave={() => setExpandedIndex(null)}
                     >
                       <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                        {item.type === 'work' && <BriefcaseIcon className="w-5 h-5 text-blue-500" />}
-                        {item.type === 'education' && <GraduationCapIcon className="w-5 h-5 text-green-500" />}
-                        {item.type === 'github' && <GithubIcon className="w-5 h-5 text-purple-500" />}
-                        {item.type === 'huggingface' && <ExternalLinkIcon className="w-5 h-5 text-red-500" />}
+                        <h3 className="text-lg font-semibold mb-1">{item.title}
+                          {item.type === 'work' && <BriefcaseIcon className="w-5 h-5 text-blue-500" />}
+                          {item.type === 'education' && <GraduationCapIcon className="w-5 h-5 text-green-500" />}
+                          {item.type === 'github' && <GithubIcon className="w-5 h-5 text-purple-500" />}
+                          {item.type === 'huggingface' && <ExternalLinkIcon className="w-5 h-5 text-red-500" />}
+                        </h3>
                         <p className="text-sm text-gray-600 mb-2">{item.organization} | {item.date}</p>
                         <p className="text-sm text-gray-600 mb-2">
                           {expandedIndex === index ? item.description : item.description.split('.')[0] + '.'}
