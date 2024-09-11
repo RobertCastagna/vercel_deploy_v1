@@ -165,6 +165,10 @@ export function DynamicTimelinePortfolio() {
                     >
                       <CardContent className="p-4">
                         <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                        {item.type === 'work' && <BriefcaseIcon className="w-5 h-5 text-blue-500" />}
+                        {item.type === 'education' && <GraduationCapIcon className="w-5 h-5 text-green-500" />}
+                        {item.type === 'github' && <GithubIcon className="w-5 h-5 text-purple-500" />}
+                        {item.type === 'huggingface' && <ExternalLinkIcon className="w-5 h-5 text-red-500" />}
                         <p className="text-sm text-gray-600 mb-2">{item.organization} | {item.date}</p>
                         <p className="text-sm text-gray-600 mb-2">
                           {expandedIndex === index ? item.description : item.description.split('.')[0] + '.'}
