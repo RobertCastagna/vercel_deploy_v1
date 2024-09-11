@@ -82,16 +82,14 @@ export function DynamicTimelinePortfolio() {
   useEffect(() => {
     const handleScroll = () => {
       if (cardRef.current) {
-        const cardBottom = cardRef.current.getBoundingClientRect().bottom
-        // modfications to trigger shrink
-        const windowHeight = window.innerHeight;
-        setLargeCard(cardBottom > windowHeight / 2);    
-        // setLargeCard(cardBottom > 0)
+        const cardTop = cardRef.current.getBoundingClientRect().top;
+        // Set the largeCard state based on scroll position
+        setLargeCard(cardTop >= 0);
       }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [])
 
   return (
@@ -107,11 +105,11 @@ export function DynamicTimelinePortfolio() {
             <CardContent className={`flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${largeCard ? 'p-16' : 'p-6'}`}>
               <div className={`flex flex-col items-center w-full transition-all duration-500 ease-in-out ${largeCard ? 'space-y-8' : 'space-y-4 sm:flex-row sm:items-start sm:space-y-0 sm:space-x-6'}`}>
                 <Avatar className={`transition-all duration-500 ${largeCard ? 'w-64 h-64' : 'w-24 h-24'}`}>
-                  <AvatarImage src="/placeholder.svg?height=256&width=256" alt="John Doe" />
-                  <AvatarFallback>JD</AvatarFallback>
+                  <AvatarImage src="/placeholder.svg?height=256&width=256" alt="RC" />
+                  <AvatarFallback>RC</AvatarFallback>
                 </Avatar>
                 <div className={`flex-grow ${largeCard ? 'text-center' : 'text-left'}`}>
-                  <h1 className={`font-bold mb-4 transition-all duration-500 ${largeCard ? 'text-6xl' : 'text-3xl'}`}>John Doe</h1>
+                  <h1 className={`font-bold mb-4 transition-all duration-500 ${largeCard ? 'text-6xl' : 'text-3xl'}`}>Robert Castagna</h1>
                   <p className={`text-gray-600 mb-6 transition-all duration-500 ${largeCard ? 'text-2xl max-w-3xl mx-auto' : 'text-base'}`}>
                     Passionate software engineer with 5+ years of experience in full-stack development.
                     Specialized in building scalable web applications and machine learning models.
