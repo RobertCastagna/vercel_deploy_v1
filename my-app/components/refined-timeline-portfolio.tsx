@@ -109,7 +109,7 @@ export default function RefinedTimelinePortfolio() {
             <div className={`flex ${largeCard ? 'flex-col items-center' : 'flex-row items-start'} w-full transition-all duration-1000 ease-in-out`}>
               <Avatar className={`transition-all duration-1000 ${largeCard ? 'w-48 h-48 mb-8' : 'w-24 h-24 mr-6'}`}>
                 <AvatarImage src="/placeholder.svg?height=192&width=192" alt="John Doe" />
-                <AvatarFallback>JD</AvatarFallback>
+                <AvatarFallback>RC</AvatarFallback>
               </Avatar>
               <div className={`flex-grow ${largeCard ? 'text-center' : 'text-left'}`}>
                 <h1 className={`font-bold mb-4 transition-all duration-1000 ${largeCard ? 'text-5xl' : 'text-3xl'}`}>John Doe</h1>

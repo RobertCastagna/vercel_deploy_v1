@@ -40,7 +40,7 @@ const timelineData: TimelineItem[] = [
     title: 'MSc in Computer Science',
     organization: 'Tech University',
     date: '2018 - 2020',
-    description: 'Completed a Master's degree in Computer Science with a focus on Machine Learning and Distributed Systems. Conducted research on optimizing distributed machine learning algorithms and published a paper on the findings.',
+    description: 'Completed a Master\'s degree in Computer Science with a focus on Machine Learning and Distributed Systems. Conducted research on optimizing distributed machine learning algorithms and published a paper on the findings.',
     skills: ['Machine Learning', 'Distributed Systems', 'Python']
   },
   {
@@ -65,7 +65,7 @@ const timelineData: TimelineItem[] = [
     title: 'BSc in Software Engineering',
     organization: 'State University',
     date: '2013 - 2017',
-    description: 'Completed a Bachelor's degree in Software Engineering, gaining a strong foundation in computer science principles, software development methodologies, algorithms, and data structures. Participated in various hackathons and coding competitions.',
+    description: 'Completed a Bachelor\'s degree in Software Engineering, gaining a strong foundation in computer science principles, software development methodologies, algorithms, and data structures. Participated in various hackathons and coding competitions.',
     skills: ['Java', 'Data Structures', 'Algorithms']
   }
 ]
