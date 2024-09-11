@@ -20,53 +20,53 @@ type TimelineItem = {
 const timelineData: TimelineItem[] = [
   {
     type: 'work',
-    title: 'Senior Software Engineer',
-    organization: 'Tech Corp',
-    date: '2021 - Present',
+    title: 'Data Engineer',
+    organization: 'CI Financial',
+    date: '2022 - Present',
     description: 'Leading the development of cloud-native applications using microservices architecture. Responsible for designing and implementing scalable solutions, mentoring junior developers, and driving the adoption of best practices in software development.',
-    skills: ['React', 'Node.js', 'AWS', 'Docker']
-  },
-  {
-    type: 'github',
-    title: 'E-commerce Platform',
-    organization: 'Personal Project',
-    date: '2020',
-    description: 'Developed a comprehensive e-commerce platform using React for the frontend and Express for the backend. Implemented features such as user authentication, product catalog, shopping cart, and payment integration with Stripe.',
-    skills: ['React', 'Express', 'MongoDB', 'Stripe API'],
-    link: 'https://github.com/yourusername/e-commerce-platform'
-  },
-  {
-    type: 'education',
-    title: 'MSc in Computer Science',
-    organization: 'Tech University',
-    date: '2018 - 2020',
-    description: 'Completed a Master\'s degree in Computer Science with a focus on Machine Learning and Distributed Systems. Conducted research on optimizing distributed machine learning algorithms and published a paper on the findings.',
-    skills: ['Machine Learning', 'Distributed Systems', 'Python']
-  },
-  {
-    type: 'work',
-    title: 'Software Developer',
-    organization: 'Startup Inc',
-    date: '2017 - 2021',
-    description: 'Worked in an agile team to develop and maintain web applications for a diverse client base. Responsibilities included full-stack development, code reviews, and collaborating with designers and product managers to deliver high-quality software solutions.',
-    skills: ['JavaScript', 'Python', 'SQL', 'Git']
+    skills: ['Python', 'SQL', 'AWS', 'Snowflake', 'dbt']
   },
   {
     type: 'huggingface',
-    title: 'NLP Model for Sentiment Analysis',
-    organization: 'Open Source Contribution',
-    date: '2019',
-    description: 'Created and fine-tuned a BERT-based model for sentiment analysis on product reviews. The model achieves state-of-the-art performance on several benchmark datasets and is publicly available for use and further development by the community.',
-    skills: ['PyTorch', 'Transformers', 'NLP'],
-    link: 'https://huggingface.co/yourusername/sentiment-analysis-bert'
+    title: 'Portfolio Optimization App',
+    organization: 'Personal Project',
+    date: '2024',
+    description: 'Developed a comprehensive investment analysis platform incorporating fundamental and sentiment analysis, as well as portfolio optimization. Integrated prebuilt strategies for portfolio construction, live news sentiment analysis using FinBERT, and risk optimization tools. Additionally, supports live portfolio tracking with IBKR integration for paper trading.',
+    skills: ['OpenBB','Python','Pandas','Riskfolio','Transformers','Streamlit','AsyncIO'],
+    link: 'https://huggingface.co/spaces/RobertCastagna/Fin_Research'
+  },
+  {
+    type: 'github',
+    title: 'Quant Trading App',
+    organization: 'Personal Project',
+    date: '2024',
+    description: 'Developed a web app for an options trading competition using Streamlit, pulling market data from online API\'s. Integrated backtested strategies to signal entry points and included Black-Scholes and Binomial options pricing models. Expanded features over an 8-week period, with full project details available on GitHub.',
+    skills: ['Backtesting','Python','Pandas','Ta-lib','Scipy','Streamlit'],
+    link: 'https://quanttrading.streamlit.app/'
   },
   {
     type: 'education',
-    title: 'BSc in Software Engineering',
-    organization: 'State University',
-    date: '2013 - 2017',
-    description: 'Completed a Bachelor\'s degree in Software Engineering, gaining a strong foundation in computer science principles, software development methodologies, algorithms, and data structures. Participated in various hackathons and coding competitions.',
-    skills: ['Java', 'Data Structures', 'Algorithms']
+    title: 'MSc in Financial Mathematics',
+    organization: 'The Johns Hopkins University',
+    date: '2023 - Present',
+    description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
+    skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
+  },
+  {
+    type: 'work',
+    title: 'Data Analyst',
+    organization: 'C2P Inc',
+    date: '2020 - 2022',
+    description: 'Worked alongside management to create data flows and published process stability reports. Responsibilities included writing core MS SQL procedures and triggers, and collaborating with designers and product managers to deliver high-quality solutions.',
+    skills: ['VBA', 'Python', 'SQL', 'Git']
+  },
+  {
+    type: 'education',
+    title: 'BSc in Applied Mathematics and Engineering',
+    organization: 'Queen\'s University',
+    date: '2021',
+    description: 'Specialized in control systems and robotics. I gained skills in advanced mathematics principles, software development methodologies, and stochastic control systems. Completed a 1 year internship.',
+    skills: ['Stochastic Processes', 'Data Structures', 'Information Theory']
   }
 ]
 
@@ -108,14 +108,14 @@ export function DynamicTimelinePortfolio() {
           <CardContent className={`flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${largeCard ? 'p-12' : 'p-6'}`}>
             <div className={`flex ${largeCard ? 'flex-col items-center' : 'flex-row items-start'} w-full transition-all duration-1000 ease-in-out`}>
               <Avatar className={`transition-all duration-1000 ${largeCard ? 'w-48 h-48 mb-8' : 'w-24 h-24 mr-6'}`}>
-                <AvatarImage src="/placeholder.svg?height=192&width=192" alt="John Doe" />
-                <AvatarFallback>JD</AvatarFallback>
+                <AvatarImage src="/placeholder.svg?height=192&width=192" alt="Robert" />
+                <AvatarFallback>RC</AvatarFallback>
               </Avatar>
               <div className={`flex-grow ${largeCard ? 'text-center' : 'text-left'}`}>
-                <h1 className={`font-bold mb-4 transition-all duration-1000 ${largeCard ? 'text-5xl' : 'text-3xl'}`}>John Doe</h1>
+                <h1 className={`font-bold mb-4 transition-all duration-1000 ${largeCard ? 'text-5xl' : 'text-3xl'}`}>Robert Castagna</h1>
                 <p className={`text-gray-600 mb-6 transition-all duration-1000 ${largeCard ? 'text-xl max-w-2xl mx-auto' : 'text-base'}`}>
-                  Passionate software engineer with 5+ years of experience in full-stack development.
-                  Specialized in building scalable web applications and machine learning models.
+                  Passionate software engineer with 4+ years of experience in a data specialized role.
+                  Mostly work on maintaining distributed compute systems, large scale data processesing and advanced monitoring tools.
                 </p>
                 <div className={`flex justify-center space-x-4 mb-8 transition-all duration-1000 ${largeCard ? 'scale-150' : ''}`}>
                   <Button
@@ -124,7 +124,7 @@ export function DynamicTimelinePortfolio() {
                     className="rounded-full bg-blue-500 hover:bg-blue-600 text-white"
                     asChild
                   >
-                    <a href="https://www.linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                    <a href="https://www.linkedin.com/in/castagnarobert/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                       <LinkedinIcon className="h-5 w-5" />
                     </a>
                   </Button>
@@ -134,7 +134,7 @@ export function DynamicTimelinePortfolio() {
                     className="rounded-full bg-gray-800 hover:bg-gray-900 text-white"
                     asChild
                   >
-                    <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                    <a href="https://github.com/RobertCastagna/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                       <GithubIcon className="h-5 w-5" />
                     </a>
                   </Button>
@@ -144,7 +144,7 @@ export function DynamicTimelinePortfolio() {
                     className="rounded-full bg-yellow-500 hover:bg-yellow-600 text-white"
                     asChild
                   >
-                    <a href="https://huggingface.co/johndoe" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile">
+                    <a href="https://huggingface.co/RobertCastagna" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile">
                       <svg viewBox="0 0 40 40" fill="currentColor" className="h-5 w-5">
                         <path d="M11.403 15.463c-.73-.773-1.527-1.487-2.404-2.101-.208-.146-.405-.293-.62-.425 1.609.244 2.786.802 3.941 1.627.32.229.658.435.989.652l1.978 1.297c1.298.858 2.62 1.681 4.012 2.344-.042-.71-.07-1.423-.07-2.139 0-2.915.566-5.742 1.668-8.385.8-1.913 1.883-3.718 3.336-5.217.331-.342.687-.66 1.053-.964.33-.274.675-.536 1.028-.777.283-.193.571-.385.869-.556-1.487 2.842-2.193 6.026-2.193 9.24 0 1.903.262 3.781.776 5.579-.354-.363-.745-.697-1.143-1.019-1.313-1.053-2.715-1.981-4.13-2.893l-3.524-2.311c-.289-.19-.578-.38-.878-.563-1.257-.77-2.574-1.392-3.987-1.839-.038-.013-.077-.024-.115-.037-.497-.161-.997-.311-1.504-.448.023-.022.042-.048.066-.069.789-.696 1.621-1.339 2.508-1.906 1.417-.907 2.96-1.579 4.551-2.097-.654.586-1.276 1.205-1.836 1.883-.533.647-.983 1.358-1.371 2.124z"/>
                       </svg>
@@ -168,7 +168,7 @@ export function DynamicTimelinePortfolio() {
             showTimeline ? 'opacity-100 max-h-full mt-8' : 'opacity-0 max-h-0 overflow-hidden'
           }`}
         >
-          <h2 className="text-3xl font-bold text-center mb-8">My Software Engineering Journey</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">My Professional Journey</h2>
 
           <div className="flex justify-center space-x-2 mb-8 bg-gray-200 p-2 rounded-lg">
             <Badge 
