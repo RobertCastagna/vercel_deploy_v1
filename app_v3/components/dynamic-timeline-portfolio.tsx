@@ -81,10 +81,12 @@ export function DynamicTimelinePortfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (cardRef.current) {
-        const cardTop = cardRef.current.getBoundingClientRect().top;
-        // Set the largeCard state based on scroll position
-        setLargeCard(cardTop >= 0);
+      const scrollPosition = window.scrollY;
+      
+      if (scrollPosition > 100) {
+        setLargeCard(false);
+      } else {
+        setLargeCard(true);
       }
     };
   
