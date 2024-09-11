@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
-import { BriefcaseIcon, GraduationCapIcon, GithubIcon, ExternalLinkIcon, LinkedinIcon, ChevronDownIcon } from "lucide-react"
+import { GithubIcon, ExternalLinkIcon, LinkedinIcon, ChevronDownIcon } from "lucide-react"
 
 type TimelineItem = {
   type: 'work' | 'education' | 'github' | 'huggingface'
