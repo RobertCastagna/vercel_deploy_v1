@@ -70,7 +70,7 @@ const timelineData: TimelineItem[] = [
   }
 ]
 
-export default function DynamicTimelinePortfolio() {
+export default function RefinedTimelinePortfolio() {
   const [filter, setFilter] = useState<'all' | 'work' | 'education' | 'github' | 'huggingface'>('all')
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
   const [showTimeline, setShowTimeline] = useState(false)
