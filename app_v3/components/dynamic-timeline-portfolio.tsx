@@ -18,7 +18,56 @@ type TimelineItem = {
 }
 
 const timelineData: TimelineItem[] = [
-  // ... (keep the existing timeline data)
+  {
+    type: 'work',
+    title: 'Data Engineer',
+    organization: 'CI Financial',
+    date: '2022 - Present',
+    description: 'Leading the development of cloud-native applications using microservices architecture. Responsible for designing and implementing scalable solutions, mentoring junior developers, and driving the adoption of best practices in software development.',
+    skills: ['Python', 'SQL', 'AWS', 'Snowflake', 'dbt']
+  },
+  {
+    type: 'huggingface',
+    title: 'Portfolio Optimization App',
+    organization: 'Personal Project',
+    date: '2024',
+    description: 'Developed a comprehensive investment analysis platform incorporating fundamental and sentiment analysis, as well as portfolio optimization. Integrated prebuilt strategies for portfolio construction, live news sentiment analysis using FinBERT, and risk optimization tools. Additionally, supports live portfolio tracking with IBKR integration for paper trading.',
+    skills: ['OpenBB','Python','Pandas','Riskfolio','Transformers','Streamlit','AsyncIO'],
+    link: 'https://huggingface.co/spaces/RobertCastagna/Fin_Research'
+  },
+  {
+    type: 'github',
+    title: 'Quant Trading App',
+    organization: 'Personal Project',
+    date: '2024',
+    description: 'Developed a web app for an options trading competition using Streamlit, pulling market data from online API\'s. Integrated backtested strategies to signal entry points and included Black-Scholes and Binomial options pricing models. Expanded features over an 8-week period, with full project details available on GitHub.',
+    skills: ['Backtesting','Python','Pandas','Ta-lib','Scipy','Streamlit'],
+    link: 'https://quanttrading.streamlit.app/'
+  },
+  {
+    type: 'education',
+    title: 'MSc in Financial Mathematics',
+    organization: 'The Johns Hopkins University',
+    date: '2023 - Present',
+    description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
+    skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
+  },
+  {
+    type: 'work',
+    title: 'Data Analyst',
+    organization: 'C2P Inc',
+    date: '2020 - 2022',
+    description: 'Worked alongside management to create data flows and published process stability reports. Responsibilities included writing core MS SQL procedures and triggers, and collaborating with designers and product managers to deliver high-quality solutions.',
+    skills: ['VBA', 'Python', 'SQL', 'Git']
+  },
+  {
+    type: 'education',
+    title: 'BSc in Applied Mathematics and Engineering',
+    organization: 'Queen\'s University',
+    date: '2021',
+    description: 'Specialized in control systems and robotics. I gained skills in advanced mathematics principles, software development methodologies, and stochastic control systems. Completed a 1 year internship.',
+    skills: ['Stochastic Processes', 'Data Structures', 'Information Theory']
+  }
 ]
 
 export function DynamicTimelinePortfolio() {
