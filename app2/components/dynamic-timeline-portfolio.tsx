@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
@@ -20,58 +20,57 @@ type TimelineItem = {
 const timelineData: TimelineItem[] = [
   {
     type: 'work',
-    title: 'Data Engineer',
-    organization: 'CI Financial',
-    date: '2022 - Present',
+    title: 'Senior Software Engineer',
+    organization: 'Tech Corp',
+    date: '2021 - Present',
     description: 'Leading the development of cloud-native applications using microservices architecture. Responsible for designing and implementing scalable solutions, mentoring junior developers, and driving the adoption of best practices in software development.',
-    skills: ['Python', 'SQL', 'AWS', 'Snowflake', 'dbt']
-  },
-  {
-    type: 'huggingface',
-    title: 'Portfolio Optimization App',
-    organization: 'Personal Project',
-    date: '2024',
-    description: 'Developed a comprehensive investment analysis platform incorporating fundamental and sentiment analysis, as well as portfolio optimization. Integrated prebuilt strategies for portfolio construction, live news sentiment analysis using FinBERT, and risk optimization tools. Additionally, supports live portfolio tracking with IBKR integration for paper trading.',
-    skills: ['OpenBB','Python','Pandas','Riskfolio','Transformers','Streamlit','AsyncIO'],
-    link: 'https://huggingface.co/spaces/RobertCastagna/Fin_Research'
+    skills: ['React', 'Node.js', 'AWS', 'Docker']
   },
   {
     type: 'github',
-    title: 'Quant Trading App',
+    title: 'E-commerce Platform',
     organization: 'Personal Project',
-    date: '2024',
-    description: 'Developed a web app for an options trading competition using Streamlit, pulling market data from online API\'s. Integrated backtested strategies to signal entry points and included Black-Scholes and Binomial options pricing models. Expanded features over an 8-week period, with full project details available on GitHub.',
-    skills: ['Backtesting','Python','Pandas','Ta-lib','Scipy','Streamlit'],
-    link: 'https://quanttrading.streamlit.app/'
+    date: '2020',
+    description: 'Developed a comprehensive e-commerce platform using React for the frontend and Express for the backend. Implemented features such as user authentication, product catalog, shopping cart, and payment integration with Stripe.',
+    skills: ['React', 'Express', 'MongoDB', 'Stripe API'],
+    link: 'https://github.com/yourusername/e-commerce-platform'
   },
   {
     type: 'education',
-    title: 'MSc in Financial Mathematics',
-    organization: 'The Johns Hopkins University',
-    date: '2023 - Present',
-    description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
-    skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
+    title: 'MSc in Computer Science',
+    organization: 'Tech University',
+    date: '2018 - 2020',
+    description: 'Completed a Master's degree in Computer Science with a focus on Machine Learning and Distributed Systems. Conducted research on optimizing distributed machine learning algorithms and published a paper on the findings.',
+    skills: ['Machine Learning', 'Distributed Systems', 'Python']
   },
   {
     type: 'work',
-    title: 'Data Analyst',
-    organization: 'C2P Inc',
-    date: '2020 - 2022',
-    description: 'Worked alongside management to create data flows and published process stability reports. Responsibilities included writing core MS SQL procedures and triggers, and collaborating with designers and product managers to deliver high-quality solutions.',
-    skills: ['VBA', 'Python', 'SQL', 'Git']
+    title: 'Software Developer',
+    organization: 'Startup Inc',
+    date: '2017 - 2021',
+    description: 'Worked in an agile team to develop and maintain web applications for a diverse client base. Responsibilities included full-stack development, code reviews, and collaborating with designers and product managers to deliver high-quality software solutions.',
+    skills: ['JavaScript', 'Python', 'SQL', 'Git']
+  },
+  {
+    type: 'huggingface',
+    title: 'NLP Model for Sentiment Analysis',
+    organization: 'Open Source Contribution',
+    date: '2019',
+    description: 'Created and fine-tuned a BERT-based model for sentiment analysis on product reviews. The model achieves state-of-the-art performance on several benchmark datasets and is publicly available for use and further development by the community.',
+    skills: ['PyTorch', 'Transformers', 'NLP'],
+    link: 'https://huggingface.co/yourusername/sentiment-analysis-bert'
   },
   {
     type: 'education',
-    title: 'BSc in Applied Mathematics and Engineering',
-    organization: 'Queen\'s University',
-    date: '2021',
-    description: 'Specialized in control systems and robotics. I gained skills in advanced mathematics principles, software development methodologies, and stochastic control systems. Completed a 1 year internship.',
-    skills: ['Stochastic Processes', 'Data Structures', 'Information Theory']
+    title: 'BSc in Software Engineering',
+    organization: 'State University',
+    date: '2013 - 2017',
+    description: 'Completed a Bachelor's degree in Software Engineering, gaining a strong foundation in computer science principles, software development methodologies, algorithms, and data structures. Participated in various hackathons and coding competitions.',
+    skills: ['Java', 'Data Structures', 'Algorithms']
   }
 ]
 
-
-export default function RefinedTimelinePortfolio() {
+export function DynamicTimelinePortfolio() {
   const [filter, setFilter] = useState<'all' | 'work' | 'education' | 'github' | 'huggingface'>('all')
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
   const [showTimeline, setShowTimeline] = useState(false)
@@ -101,8 +100,9 @@ export default function RefinedTimelinePortfolio() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
+
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-blue-200 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className={`max-w-6xl mx-auto transition-all duration-1000 ease-in-out ${largeCard ? 'h-screen flex items-center justify-center' : ''}`}>
         <Card className={`w-full transition-all duration-1000 ease-in-out ${largeCard ? 'bg-white shadow-2xl' : 'bg-transparent shadow-none'}`}>
           <CardContent className={`flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${largeCard ? 'p-12' : 'p-6'}`}>
@@ -114,8 +114,8 @@ export default function RefinedTimelinePortfolio() {
               <div className={`flex-grow ${largeCard ? 'text-center' : 'text-left'}`}>
                 <h1 className={`font-bold mb-4 transition-all duration-1000 ${largeCard ? 'text-5xl' : 'text-3xl'}`}>John Doe</h1>
                 <p className={`text-gray-600 mb-6 transition-all duration-1000 ${largeCard ? 'text-xl max-w-2xl mx-auto' : 'text-base'}`}>
-                  Passionate software engineer with 4+ years of experience in a data specialized role.
-                  Mostly work on maintaining distributed compute systems, large scale data processesing and advanced monitoring tools.
+                  Passionate software engineer with 5+ years of experience in full-stack development.
+                  Specialized in building scalable web applications and machine learning models.
                 </p>
                 <div className={`flex justify-center space-x-4 mb-8 transition-all duration-1000 ${largeCard ? 'scale-150' : ''}`}>
                   <Button
