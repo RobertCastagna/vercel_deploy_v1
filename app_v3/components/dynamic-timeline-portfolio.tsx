@@ -172,7 +172,7 @@ export function DynamicTimelinePortfolio() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-center mb-8">My Software Engineering Journey</h2>
 
-          <div className="flex justify-center space-x-2 mb-8 bg-gray-200 p-2 rounded-lg">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 bg-gray-200 p-2 rounded-lg">
             <Badge 
               onClick={() => setFilter('all')} 
               className={`cursor-pointer ${filter === 'all' ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground'}`}
@@ -206,33 +206,38 @@ export function DynamicTimelinePortfolio() {
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 hidden md:block"></div>
 
-            <div className="space-y-4">
+            <div className="space-y-8">
               {filteredData.map((item, index) => (
-                <div key={index} className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-start`}>
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                <div key={index} className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center md:items-start`}>
+                  <div className="w-full md:w-5/12 mb-4 md:mb-0">
                     <Card 
-                      className={`inline-block transition-all duration-300 ease-in-out rounded-xl ${expandedIndex === index ? 'shadow-lg' : 'hover:shadow-md'}`}
+                      className={`transition-all duration-300 ease-in-out rounded-xl ${expandedIndex === index ? 'shadow-lg' : 'hover:shadow-md'}`}
                       onMouseEnter={() => setExpandedIndex(index)}
                       onMouseLeave={() => setExpandedIndex(null)}
                     >
                       <CardContent className="p-4">
-                        <h3 className="text-lg font-semibold mb-1">{item.title}{item.type === 'work' && <BriefcaseIcon className="w-5 h-5 text-blue-500" />}{item.type === 'education' && <GraduationCapIcon className="w-5 h-5 text-green-500" />}{item.type === 'github' && <GithubIcon className="w-5 h-5 text-purple-500" />}{item.type === 'huggingface' && <ExternalLinkIcon className="w-5 h-5 text-red-500" />}
-                        </h3>
+                        <div className="flex items-center justify-between mb-2">
+                          <h3 className="text-lg font-semibold">{item.title}</h3>
+                          {item.type === 'work' && <BriefcaseIcon className="w-5 h-5 text-blue-500" />}
+                          {item.type === 'education' && <GraduationCapIcon className="w-5 h-5 text-green-500" />}
+                          {item.type === 'github' && <GithubIcon className="w-5 h-5 text-purple-500" />}
+                          {item.type === 'huggingface' && <ExternalLinkIcon className="w-5 h-5 text-red-500" />}
+                        </div>
                         <p className="text-sm text-gray-600 mb-2">{item.organization} | {item.date}</p>
                         <p className="text-sm text-gray-600 mb-2">
                           {expandedIndex === index ? item.description : item.description.split('.')[0] + '.'}
                         </p>
                         {item.skills && (
-                          <div className="flex flex-wrap gap-2 justify-end mt-2">
+                          <div className="flex flex-wrap gap-2 mt-2">
                             {item.skills.map((skill, skillIndex) => (
                               <Badge key={skillIndex} variant="secondary">{skill}</Badge>
                             ))}
                           </div>
                         )}
                         {expandedIndex === index && item.link && (
-                          <div className="mt-4 text-right">
+                          <div className="mt-4">
                             <Button
                               asChild
                               variant="outline"
@@ -253,10 +258,8 @@ export function DynamicTimelinePortfolio() {
                       </CardContent>
                     </Card>
                   </div>
-                  <div className="w-2/12 flex justify-center">
-                    <div className="w-4 h-4 bg-primary rounded-full mt-4"></div>
-                  </div>
-                  <div className="w-5/12"></div>
+                  <div className="w-4 h-4 bg-primary rounded-full my-2 md:mx-auto"></div>
+                  <div className="w-full md:w-5/12"></div>
                 </div>
               ))}
             </div>
