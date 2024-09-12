@@ -27,6 +27,14 @@ const timelineData: TimelineItem[] = [
     skills: ['Python', 'SQL', 'AWS', 'Snowflake', 'dbt']
   },
   {
+    type: 'work',
+    title: 'Streamlit in Snowflake',
+    organization: 'CI Financial',
+    date: '2023 - 2024',
+    description: 'Leading the development of cloud-native application used by 50+ people. Responsible for designing and implementing backend structure, designing the front-end using a python framework (Streamlit) and mentoring junior developers.',
+    skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
+  },
+  {
     type: 'huggingface',
     title: 'Portfolio Optimization App',
     organization: 'Personal Project',
@@ -51,6 +59,14 @@ const timelineData: TimelineItem[] = [
     date: '2023 - Present',
     description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
     skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
+  },
+  {
+    type: 'work',
+    title: 'Graph Database',
+    organization: 'CI Financial',
+    date: '2023',
+    description: 'Conducted social network analysis using harmonic centrality and built a scoring algorithm on AWS Neptune. Worked in a team of 6 over the course of 8 months and presented findings to Chief Investments Officer.',
+    skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
   },
   {
     type: 'work',
