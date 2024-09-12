@@ -81,13 +81,17 @@ export function DynamicTimelinePortfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (cardRef.current) {
-        const cardTop = cardRef.current.getBoundingClientRect().top;
-        // Set the largeCard state based on scroll position
-        setLargeCard(cardTop >= 0);
+      const scrollPosition = window.scrollY;
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      // Only shrink the card if there is enough scrollable content
+      if (scrollableHeight > 100) {
+        setLargeCard(scrollPosition < 20);  // Shrink card after scrolling 100px down, grow back at the top
+      } else {
+        setLargeCard(false);  // No scrollable content, keep it small
       }
-      };
-  
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [])
