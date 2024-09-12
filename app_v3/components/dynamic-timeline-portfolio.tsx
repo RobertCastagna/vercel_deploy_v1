@@ -186,7 +186,7 @@ export function DynamicTimelinePortfolio() {
         className="transition-all duration-500 ease-in-out"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-3xl font-bold text-center mb-8">My Software Engineering Journey</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Hover any event to view more.</h2>
 
           <div className="flex flex-wrap justify-center gap-2 mb-8 bg-gray-200 p-2 rounded-lg">
             <Badge 
