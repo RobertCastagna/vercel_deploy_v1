@@ -97,7 +97,7 @@ export function DynamicTimelinePortfolio() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-[#D8BFD8] py-12 px-4 sm:px-6 lg:px-8">
       <div 
         ref={cardRef}
         className={`transition-all duration-500 ease-in-out ${
