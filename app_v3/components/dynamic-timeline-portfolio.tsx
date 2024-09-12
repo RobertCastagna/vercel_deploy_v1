@@ -131,8 +131,8 @@ export function DynamicTimelinePortfolio() {
                 <div className={`flex-grow ${largeCard ? 'text-center' : 'text-left'}`}>
                   <h1 className={`font-bold mb-4 transition-all duration-500 ${largeCard ? 'text-6xl' : 'text-3xl'}`}>Robert Castagna</h1>
                   <p className={`text-gray-600 mb-6 transition-all duration-500 ${largeCard ? 'text-2xl max-w-3xl mx-auto' : 'text-base'}`}>
-                    Passionate software engineer with 5+ years of experience in full-stack development.
-                    Specialized in building scalable web applications and machine learning models.
+                    Passionate software engineer with 4+ years of experience in a data specialized role.
+                    Mostly work on maintaining distributed compute systems, large scale data processesing and advanced monitoring tools.
                   </p>
                   <div className={`flex justify-center space-x-6 mb-8 transition-all duration-500 ${largeCard ? 'scale-150' : ''}`}>
                     <Button
