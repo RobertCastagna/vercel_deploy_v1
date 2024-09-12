@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
+  --background-color: #0D0D0D;
+  --primary-color: #8A2BE2;
+  --accent-color: #4169E1;
+  --glow-color: #00FFFF;
+  --text-color: #E0E0E0; /* A light gray for text */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,10 +20,72 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color); /* Deep space background */
+  color: var(--text-color); /* Light text */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
+
+.card {
+  background: var(--primary-color); /* Purple card background */
+  color: var(--text-color); /* Light text on dark background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--glow-color); /* Glowing shadow */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.card:hover {
+  box-shadow: 0 0 30px var(--glow-color); /* Larger glow on hover */
+}
+
+button {
+  background-color: var(--accent-color); /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--glow-color); /* Glow effect */
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Button glow effect */
+button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--glow-color) 20%, transparent 80%);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+button:hover::before {
+  top: 0;
+  left: 0;
+}
+
+h1, h2 {
+  color: var(--accent-color); /* Blue or purple text */
+  text-shadow: 0 0 10px var(--glow-color); /* Glowing text effect */
+}
+
+.gradient-section {
+  background: linear-gradient(135deg, #2A0A4F, #1B1B38); /* Dark blue to purple */
+  border-radius: 10px;
+  padding: 20px;
+}
+
 
 @layer utilities {
   .text-balance {
@@ -89,4 +156,18 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes falling-stars {
+  0% { top: -10px; left: 50%; opacity: 0; }
+  100% { top: 110%; left: 80%; opacity: 1; }
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--glow-color);
+  border-radius: 50%;
+  animation: falling-stars 2s infinite;
 }

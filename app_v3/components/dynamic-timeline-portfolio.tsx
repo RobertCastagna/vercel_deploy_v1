@@ -97,7 +97,7 @@ export function DynamicTimelinePortfolio() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen" style={{ backgroundColor: "var(--background-color)" }}>
       <div 
         ref={cardRef}
         className={`transition-all duration-500 ease-in-out ${
@@ -115,8 +115,8 @@ export function DynamicTimelinePortfolio() {
                 <div className={`flex-grow ${largeCard ? 'text-center' : 'text-left'}`}>
                   <h1 className={`font-bold mb-4 transition-all duration-500 ${largeCard ? 'text-6xl' : 'text-3xl'}`}>Robert Castagna</h1>
                   <p className={`text-gray-600 mb-6 transition-all duration-500 ${largeCard ? 'text-2xl max-w-3xl mx-auto' : 'text-base'}`}>
-                    Passionate software engineer with 5+ years of experience in full-stack development.
-                    Specialized in building scalable web applications and machine learning models.
+                    Passionate software engineer with 4+ years of experience in a data specialized role.
+                    Mostly work on maintaining distributed compute systems, large scale data processesing and advanced monitoring tools.
                   </p>
                   <div className={`flex justify-center space-x-6 mb-8 transition-all duration-500 ${largeCard ? 'scale-150' : ''}`}>
                     <Button
@@ -125,7 +125,7 @@ export function DynamicTimelinePortfolio() {
                       className="rounded-full bg-blue-500 hover:bg-blue-600 text-white"
                       asChild
                     >
-                      <a href="https://www.linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                      <a href="https://www.linkedin.com/in/castagnarobert/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                         <LinkedinIcon className="h-5 w-5" />
                       </a>
                     </Button>
@@ -135,7 +135,7 @@ export function DynamicTimelinePortfolio() {
                       className="rounded-full bg-gray-800 hover:bg-gray-900 text-white"
                       asChild
                     >
-                      <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                      <a href="https://github.com/RobertCastagna/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                         <GithubIcon className="h-5 w-5" />
                       </a>
                     </Button>
@@ -145,7 +145,7 @@ export function DynamicTimelinePortfolio() {
                       className="rounded-full bg-yellow-500 hover:bg-yellow-600 text-white"
                       asChild
                     >
-                      <a href="https://huggingface.co/johndoe" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile">
+                      <a href="https://huggingface.co/RobertCastagna" target="_blank" rel="noopener noreferrer" aria-label="Hugging Face Profile">
                         <svg viewBox="0 0 40 40" fill="currentColor" className="h-5 w-5">
                           <path d="M11.403 15.463c-.73-.773-1.527-1.487-2.404-2.101-.208-.146-.405-.293-.62-.425 1.609.244 2.786.802 3.941 1.627.32.229.658.435.989.652l1.978 1.297c1.298.858 2.62 1.681 4.012 2.344-.042-.71-.07-1.423-.07-2.139 0-2.915.566-5.742 1.668-8.385.8-1.913 1.883-3.718 3.336-5.217.331-.342.687-.66 1.053-.964.33-.274.675-.536 1.028-.777.283-.193.571-.385.869-.556-1.487 2.842-2.193 6.026-2.193 9.24 0 1.903.262 3.781.776 5.579-.354-.363-.745-.697-1.143-1.019-1.313-1.053-2.715-1.981-4.13-2.893l-3.524-2.311c-.289-.19-.578-.38-.878-.563-1.257-.77-2.574-1.392-3.987-1.839-.038-.013-.077-.024-.115-.037-.497-.161-.997-.311-1.504-.448.023-.022.042-.048.066-.069.789-.696 1.621-1.339 2.508-1.906 1.417-.907 2.96-1.579 4.551-2.097-.654.586-1.276 1.205-1.836 1.883-.533.647-.983 1.358-1.371 2.124z"/>
                         </svg>
@@ -170,7 +170,7 @@ export function DynamicTimelinePortfolio() {
         className="transition-all duration-500 ease-in-out"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h2 className="text-3xl font-bold text-center mb-8">My Software Engineering Journey</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">My Story at a Glance.</h2>
 
           <div className="flex justify-center space-x-2 mb-8 bg-gray-200 p-2 rounded-lg">
             <Badge 
