@@ -86,7 +86,7 @@ export function DynamicTimelinePortfolio() {
 
       // Only shrink the card if there is enough scrollable content
       if (scrollableHeight > 100) {
-        setLargeCard(scrollPosition < 20);  // Shrink card after scrolling 100px down, grow back at the top
+        setLargeCard(scrollPosition < 1);  // Shrink card after scrolling 100px down, grow back at the top
       } else {
         setLargeCard(false);  // No scrollable content, keep it small
       }
