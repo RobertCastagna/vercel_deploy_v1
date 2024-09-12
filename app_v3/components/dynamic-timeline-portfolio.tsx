@@ -81,9 +81,12 @@ export function DynamicTimelinePortfolio() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setLargeCard(scrollPosition < 100);
-    };
+      if (cardRef.current) {
+        const cardTop = cardRef.current.getBoundingClientRect().top;
+        // Set the largeCard state based on scroll position
+        setLargeCard(cardTop >= 0);
+      }
+      };
   
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
