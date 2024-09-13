@@ -125,7 +125,7 @@ export function DynamicTimelinePortfolio() {
             <CardContent className={`flex flex-col items-center justify-center transition-all duration-500 ease-in-out ${largeCard ? 'p-16' : 'p-6'}`}>
               <div className={`flex flex-col items-center w-full transition-all duration-500 ease-in-out ${largeCard ? 'space-y-8' : 'space-y-4 sm:flex-row sm:items-start sm:space-y-0 sm:space-x-6'}`}>
                 <Avatar className={`transition-all duration-500 ${largeCard ? 'w-64 h-64' : 'w-24 h-24'}`}>
-                  <AvatarImage src="/mypicture.JPG?height=256&width=220" alt="RC" />
+                  <AvatarImage src="/mypicture.JPG?height=256&width=150" alt="RC" />
                   <AvatarFallback>RC</AvatarFallback>
                 </Avatar>
                 <div className={`flex-grow ${largeCard ? 'text-center' : 'text-left'}`}>
