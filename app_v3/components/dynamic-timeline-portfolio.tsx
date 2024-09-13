@@ -70,6 +70,15 @@ const timelineData: TimelineItem[] = [
     skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
   },
   {
+    type: 'github',
+    title: 'First Website',
+    organization: 'Personal Project',
+    date: '2023',
+    description: 'Built my first personal portfolio project website. We have obviously learned some new things since then; I made this one using GitHub Pages. It has a cool blog.',
+    skills: ['HTML','CSS','GitHub Pages'],
+    link: 'https://robertcastagna.github.io/My_Portfolio/'
+  },
+  {
     type: 'work',
     title: 'Data Analyst',
     organization: 'C2P Inc',
