@@ -45,6 +45,15 @@ const timelineData: TimelineItem[] = [
   },
   {
     type: 'github',
+    title: 'Internet Shopping Cart',
+    organization: 'Personal Project',
+    date: '2024',
+    description: 'I developed a server-based application to track eCommerce products, display recent saves in a Chrome plugin UI, and notify users of price drops over time. Leveraging AI tools like "Magic Patterns" for UI templating and Claude 3.5 Sonnet for debugging network issues, I built the tool in just two weeks. This project highlights my ability to integrate cutting-edge technologies for efficient development, particularly in areas where I sought to improve, such as rapid deployment and network communication. It showcases technical problem-solving and adaptability with AI-driven solutions.',
+    skills: ['Python', 'Django', 'Selectolax', 'JS', 'Tailwind'],
+    link: 'https://github.com/RobertCastagna/Shopping_Cart_Plugin'
+  },
+  {
+    type: 'github',
     title: 'Quant Trading App',
     organization: 'Personal Project',
     date: '2024',
@@ -60,14 +69,6 @@ const timelineData: TimelineItem[] = [
     description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
     skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
   },
-  // {
-  //   type: 'work',
-  //   title: 'Graph Database',
-  //   organization: 'CI Financial',
-  //   date: '2023',
-  //   description: 'Conducted social network analysis using harmonic centrality and built a scoring algorithm on AWS Neptune. Worked in a team of 6 over the course of 8 months and presented findings to Chief Investments Officer.',
-  //   skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
-  // },
   {
     type: 'work',
     title: 'Data Analyst',
