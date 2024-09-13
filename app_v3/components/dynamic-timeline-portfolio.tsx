@@ -26,14 +26,14 @@ const timelineData: TimelineItem[] = [
     description: 'Leading the development of cloud-native applications using microservices architecture. Responsible for designing and implementing scalable solutions, mentoring junior developers, and driving the adoption of best practices in software development.',
     skills: ['Python', 'SQL', 'AWS', 'Snowflake', 'dbt']
   },
-  {
-    type: 'work',
-    title: 'Streamlit in Snowflake',
-    organization: 'CI Financial',
-    date: '2023 - 2024',
-    description: 'Leading the development of cloud-native application used by 50+ people. Responsible for designing and implementing backend structure, designing the front-end using a python framework (Streamlit) and mentoring junior developers.',
-    skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
-  },
+  // {
+  //   type: 'work',
+  //   title: 'Streamlit in Snowflake',
+  //   organization: 'CI Financial',
+  //   date: '2023 - 2024',
+  //   description: 'Leading the development of cloud-native application used by 50+ people. Responsible for designing and implementing backend structure, designing the front-end using a python framework (Streamlit) and mentoring junior developers.',
+  //   skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
+  // },
   {
     type: 'huggingface',
     title: 'Portfolio Optimization App',
@@ -60,14 +60,14 @@ const timelineData: TimelineItem[] = [
     description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
     skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
   },
-  {
-    type: 'work',
-    title: 'Graph Database',
-    organization: 'CI Financial',
-    date: '2023',
-    description: 'Conducted social network analysis using harmonic centrality and built a scoring algorithm on AWS Neptune. Worked in a team of 6 over the course of 8 months and presented findings to Chief Investments Officer.',
-    skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
-  },
+  // {
+  //   type: 'work',
+  //   title: 'Graph Database',
+  //   organization: 'CI Financial',
+  //   date: '2023',
+  //   description: 'Conducted social network analysis using harmonic centrality and built a scoring algorithm on AWS Neptune. Worked in a team of 6 over the course of 8 months and presented findings to Chief Investments Officer.',
+  //   skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
+  // },
   {
     type: 'work',
     title: 'Data Analyst',
@@ -188,7 +188,7 @@ export function DynamicTimelinePortfolio() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <h2 className="text-3xl font-bold text-center mb-8">Hover any event to view more.</h2>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-8 bg-gray-200 p-2 rounded-lg">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 bg-gradient-to-r from-purple-500 via-blue-500 to-black p-2 rounded-lg">
             <Badge 
               onClick={() => setFilter('all')} 
               className={`cursor-pointer ${filter === 'all' ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground'}`}
