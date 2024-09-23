@@ -26,14 +26,14 @@ const timelineData: TimelineItem[] = [
     description: 'Leading the development of cloud-native applications using microservices architecture. Responsible for designing and implementing scalable solutions, mentoring junior developers, and driving the adoption of best practices in software development.',
     skills: ['Python', 'SQL', 'AWS', 'Snowflake', 'dbt']
   },
-  // {
-  //   type: 'work',
-  //   title: 'Streamlit in Snowflake',
-  //   organization: 'CI Financial',
-  //   date: '2023 - 2024',
-  //   description: 'Leading the development of cloud-native application used by 50+ people. Responsible for designing and implementing backend structure, designing the front-end using a python framework (Streamlit) and mentoring junior developers.',
-  //   skills: ['Python', 'SQL', 'Data Modelling', 'ETL']
-  // },
+  {
+    type: 'github',
+    title: 'Technical Analysis - ML',
+    organization: 'Personal Project',
+    date: '2024',
+    description: 'Built a classifier model to predict weekly gains and losses for a given stock price using various technical analysis indicators. Evaluation techniques explored included using a random forest vs. SVM vs. Gradient boosting trees (XGBoost). Prediction accuracy was further refined using both PCA and Nonnegative matrix factorization.',
+    skills: ['Python', 'ta-lib', 'XGB']
+  },
   {
     type: 'huggingface',
     title: 'Portfolio Optimization App',
