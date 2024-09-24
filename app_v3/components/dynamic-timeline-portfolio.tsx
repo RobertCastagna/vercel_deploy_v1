@@ -63,10 +63,10 @@ const timelineData: TimelineItem[] = [
   },
   {
     type: 'education',
-    title: 'MSc in Financial Mathematics',
-    organization: 'The Johns Hopkins University',
-    date: '2023 - Present',
-    description: 'Completing a Master\'s degree in Financial Mathematics with a focus on Machine Learning and Time Series Analysis. Conducting research with classifier-based machine learning algorithms to determine predictive signals.',
+    title: 'MSc in Computer Science',
+    organization: 'Georgia Institute of Technology',
+    date: '2024 - Present',
+    description: 'Completing a Master\'s degree in Computer Science with a focus on Machine Learning Part-Time, while having a Full-Time occupation. Conducting research with classifier-based machine learning algorithms to determine predictive equity signals.',
     skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
   },
   {
