@@ -53,21 +53,21 @@ const timelineData: TimelineItem[] = [
     link: 'https://github.com/RobertCastagna/Shopping_Cart_Plugin'
   },
   {
-    type: 'github',
-    title: 'Quant Trading App',
-    organization: 'Personal Project',
-    date: '2024',
-    description: 'Developed a web app for an options trading competition using Streamlit, pulling market data from online API\'s. Integrated backtested strategies to signal entry points and included Black-Scholes and Binomial options pricing models. Expanded features over an 8-week period, with full project details available on GitHub.',
-    skills: ['Backtesting','Python','Pandas','Ta-lib','Scipy','Streamlit'],
-    link: 'https://quanttrading.streamlit.app/'
-  },
-  {
     type: 'education',
     title: 'MSc in Computer Science',
     organization: 'Georgia Institute of Technology',
     date: '2024 - Present',
     description: 'Completing a Master\'s degree in Computer Science with a focus on Machine Learning Part-Time, while having a Full-Time occupation. Conducting research with classifier-based machine learning algorithms to determine predictive equity signals.',
     skills: ['Statsmodels', 'Ta-lib', 'Python', 'sklearn', 'XGB']
+  },
+  {
+    type: 'github',
+    title: 'Quant Trading App',
+    organization: 'Personal Project',
+    date: '2023',
+    description: 'Developed a web app for an options trading competition using Streamlit, pulling market data from online API\'s. Integrated backtested strategies to signal entry points and included Black-Scholes and Binomial options pricing models. Expanded features over an 8-week period, with full project details available on GitHub.',
+    skills: ['Backtesting','Python','Pandas','Ta-lib','Scipy','Streamlit'],
+    link: 'https://quanttrading.streamlit.app/'
   },
   {
     type: 'github',
